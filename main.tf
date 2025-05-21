@@ -53,12 +53,13 @@ resource "google_container_node_pool" "primary_nodes" {
   }
 
   autoscaling {
-    min_node_count = 1
-    max_node_count = 2
+    min_node_count = 2
+    max_node_count = 4
   }
 
   node_config {
-    machine_type = "e2-small"
+    #machine_type = "e2-small"
+	machine_type = "e2-custom-2-8192"   # 2 vCPUs, 8 GB RAM
     preemptible  = false
 	
 	disk_size_gb = 20
@@ -88,8 +89,11 @@ provider "kubernetes" {
 # VM instance for MySQL container
 resource "google_compute_instance" "mysql_vm" {
   name         = "mysql-vm"
-  machine_type = "e2-micro"
+  #machine_type = "e2-micro"
+  machine_type = "e2-custom-2-8192"   # 2 vCPUs, 8 GB RAM
   zone         = var.zone
+  
+  allow_stopping_for_update = true
 
   tags = ["mysql-server"]
 
