@@ -68,6 +68,11 @@ terraform apply
 
 Confirm the action when prompted.
 
+### Extra Notes:
+
+Please make sure the files use LF instead of CRLF.
+Ensure to log in to your GCP account.
+
 ## License
 
 This project is licensed under the MIT License.
