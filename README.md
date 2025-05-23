@@ -10,6 +10,48 @@ Before getting started, ensure you have the following installed:
 - [gcloud CLI](https://cloud.google.com/sdk/docs/install)
 - A Google Cloud account with billing enabled
 
+## GCP Setup Using `gcloud` CLI
+
+Before applying the Terraform configuration, ensure your Google Cloud project is correctly configured via the `gcloud` CLI:
+
+1. **Authenticate with Google Cloud:**
+
+   ```bash
+   gcloud auth login
+   gcloud auth application-default login
+  ```
+
+2. **List Available Projects (Optional):**
+
+   ```bash
+   gcloud projects list
+   ```
+
+3. **Set the Desired Project:**
+
+   ```bash
+   gcloud config set project PROJECT_ID
+   ```
+
+4. **Install `kubectl` Component (if not already installed):**
+
+   ```bash
+   gcloud components install kubectl
+   ```
+
+5. **Enable Required Services:**
+
+   ```bash
+   gcloud services enable compute.googleapis.com --project=PROJECT_ID
+   gcloud services enable container.googleapis.com --project=PROJECT_ID
+   ```
+
+6. **(Optional) Get Cluster Credentials for Kubernetes Access:**
+
+   ```bash
+   gcloud container clusters get-credentials ecommerce-cluster --zone europe-west1-b --project=PROJECT_ID
+   ```
+
 ## Setup Instructions
 
 ### 1. Clone the Repository
@@ -17,7 +59,7 @@ Before getting started, ensure you have the following installed:
 ```bash
 git clone https://github.com/Deniz1433/CS436-Term-Project.git
 cd your-repo
-````
+```
 
 ### 2. Create a GCP Project
 
@@ -70,9 +112,10 @@ Confirm the action when prompted.
 
 ### Extra Notes:
 
-Please make sure the files use LF instead of CRLF.
-Ensure to log in to your GCP account.
+* Please make sure the files use LF instead of CRLF.
+* Ensure to log in to your GCP account.
 
 ## License
 
 This project is licensed under the MIT License.
+
