@@ -24,7 +24,6 @@ Before applying the Terraform configuration, ensure your Google Cloud project is
 
    ```bash
    gcloud projects list
-   
 
 3. **Set the Desired Project:**
 
