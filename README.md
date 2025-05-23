@@ -19,13 +19,12 @@ Before applying the Terraform configuration, ensure your Google Cloud project is
    ```bash
    gcloud auth login
    gcloud auth application-default login
-  ```
-
+  
 2. **List Available Projects (Optional):**
 
    ```bash
    gcloud projects list
-   ```
+   
 
 3. **Set the Desired Project:**
 
