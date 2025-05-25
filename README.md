@@ -56,7 +56,7 @@ Before applying the Terraform configuration, ensure your Google Cloud project is
 
 ```bash
 git clone https://github.com/Deniz1433/CS436-Term-Project.git
-cd your-repo
+cd CS436-Term-Project
 ```
 
 ### 2. Create a GCP Project
