@@ -8,7 +8,7 @@ Before getting started, ensure you have the following installed:
 
 - [Terraform](https://www.terraform.io/downloads)
 - [gcloud CLI](https://cloud.google.com/sdk/docs/install)
-- A Google Cloud account with billing enabled
+- A Google Cloud account with billing enabled or Free Trial
 
 ## GCP Setup Using `gcloud` CLI
 
