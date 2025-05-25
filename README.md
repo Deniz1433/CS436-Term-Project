@@ -80,8 +80,8 @@ mailgun_api_key             = "your-mailgun-api-key"
 mailgun_domain              = "your-mailgun-domain"
 email_from                  = "your-email-from-address"
 dangerously_disable_host_check = "true-or-false"
-gmail_user = "mail-address"
-gmail_pass= "application-password"
+gmail_user                  = "mail-address"
+gmail_pass                  = "application-password"
 ```
 
 ### 4. Initialize Terraform
